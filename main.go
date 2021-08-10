@@ -1,7 +1,9 @@
 package main
 
-import "github.com/kimhono97/learngo/lecture"
+import (
+	"github.com/kimhono97/learngo/lecture"
+)
 
 func main() {
-	lecture.Lec402()
+	lecture.Lec305()
 }
