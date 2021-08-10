@@ -122,5 +122,20 @@ func Lec109() {
 func Lec110() {
 	map_obj := map[string]string{"name": "nico", "age": "12"}
 	fmt.Println(map_obj)
-	fmt.Println(map_obj["age"])
+	for key, val := range map_obj {
+		fmt.Println(key, val)
+	}
+}
+
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
+
+func Lec111() {
+	st_obj := person{name: "nico", age: 12, favFood: []string{"kimchi", "ramen"}}
+	//st_obj := person{"nico", 12, []string{"kimchi", "ramen"}}
+
+	fmt.Println(st_obj)
 }
