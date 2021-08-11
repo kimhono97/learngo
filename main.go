@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	lecture.Lec305()
+	lecture.Lec400()
 }
