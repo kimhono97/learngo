@@ -56,11 +56,11 @@ func getPage(page int) {
 	doc, err := goquery.NewDocumentFromReader(res.Body)
 	checkErr(err)
 
-	searchCards := doc.Find(".job_seen_beacon")
-	fmt.Println(" --> #Jobs : ", searchCards.Length())
-
-	searchCards.Each(func(i int, s *goquery.Selection) {
-		//...
+	doc.Find("a").Each(func(i int, s *goquery.Selection) {
+		id, isExist := s.Attr("data-jk")
+		if isExist {
+			fmt.Println(" ---> ", id)
+		}
 	})
 }
 func Lec400() {
